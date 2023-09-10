@@ -1,0 +1,48 @@
+
+
+
+.cajaprincipal{
+    height: 300px;
+    background-color: blue;
+    display: flex;
+    /*flex-direction: row;     /*este es para que quede por defector*/
+    /*flex-wrap: wrap;         /* este es para que las cajas chicas se vallan para abajo*/
+      flex-flow: row wrap;   /*este es para combinar row y wrao*/
+
+ /************************************************************************************************************/
+    /* esto es para alineacion orizontal en el eje principal es en filas "seraia main axis" 
+    esto es para ordenar las cajas chicas en fila seia el eje orizontal ----- main axis-----
+    -----------------el comando principal es es     <<<<<<< justify-content:-----;  >>>>>>>>>>
+
+    /* justify-content: end;            /*este es para que empiezen de la derecha*/
+    /* justify-content: flex-start;     /*este es para que empieze de la izquierda */
+    /* justify-content: center ;        /*este es para que este centrado */
+    /* justify-content: space-between;  /* este es para separlos las cajas chicas y darles espacio*/
+    /* justify-content:   space-around; /* se mantiene el espacop entre cajas y un pequeño espacio al inicio y fin */
+  /**************************************************************************************************************/
+
+
+  /******************************************align-items************************************************************/
+/*****************para poder usar estas propiedades tiene que tener si ho si un alto  "height: ---px;"*************/
+/******* nos sirve para alinear en eje transfersal -- como si fuera en columna  y va de arriba asia abajo*/
+
+ /*align-items: flex-start; /* es para que se valla al  inicio */
+   align-items: center; /*este es para que se ce valla al centro */
+ /*align-items: flex-end; /*este es para que se ce valla al ultimo  */
+ /*align-items: stretch; /* este es para que se estire el alto  de cada caja se estiran asta alcanzar el alto  ^*/
+ /* para que ocupe todo el espacio de alto y ancho de cada minicajas/*
+ /*align-content: flex-start ; /* este es para quitar el espacion  cuando tienes mas de una linea ho columnas ??? */
+                              
+}
+.cajachica{
+    border: solid red 1px;
+    flex-grow:  1 ; /*este comando es para repartir todo el espacio que hay entre todas las minicajas en la fila*/
+    /* este comando es para repartir todo el espacio que queda se reparte entre las minicajas */
+    /* este es para repartir el spacio qu sobra de toda la caja granja a las cajas chicas en fila */
+    
+}
+.cajachica3{ /* si quermos que una minicaja tenga mas espacio que las otras minicajas le tenemos que separar 
+             /* a la  minicaja  en otra classe y darle por aparte espacion el el comando flex-grow: --;  */
+    border: solid greenyellow 1px;
+    flex-grow: 2; 
+}
